@@ -1,0 +1,47 @@
+<!-- services.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Services - Your Company Name</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <h1>Your Company Name</h1>
+</header>
+
+<nav>
+    <!-- Same navigation -->
+    <!-- ... -->
+</nav>
+
+<main>
+    <h2>What We Do</h2>
+    <p>
+        At Your Company Name, we offer a comprehensive suite of services designed to elevate your home entertainment experience.
+    </p>
+
+    <h3><a href="2-channel-audio.html">2 Channel Audio</a></h3>
+    <p>
+        Immerse yourself in rich, high-fidelity sound with our custom two-channel audio setups. We tailor systems to your preferences, ensuring an unparalleled listening experience.
+    </p>
+
+    <h3><a href="home-theater.html">Home Theater/Personal Theater</a></h3>
+    <p>
+        Transform your living space into a cinematic masterpiece. From conceptualization to installation, we create home theaters that rival the finest cinemas.
+    </p>
+
+    <h3><a href="consultation.html">Consultation Services</a></h3>
+    <p>
+        Our expert consultants are here to guide you every step of the way. Choose the level of service that best fits your needs.
+    </p>
+</main>
+
+<footer>
+    <p>&copy; 2024 Your Company Name</p>
+</footer>
+
+</body>
+</html>

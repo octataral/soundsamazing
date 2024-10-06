@@ -1,0 +1,106 @@
+/* Updated styles.css based on the provided image */
+
+body {
+    font-family: 'Futura', sans-serif;
+    color: #e6e6e6;
+    background-color: #1a1a1a;
+    margin: 0;
+    padding: 0;
+}
+
+header, nav, footer {
+    background-color: #1a1a1a;
+    color: #e6e6e6;
+}
+
+header {
+    padding: 20px;
+    text-align: center;
+    font-family: 'Futura', sans-serif;
+    font-size: 2.5em;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    border-top: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+nav a {
+    color: #e6e6e6;
+    margin: 0 15px;
+    text-decoration: none;
+    font-family: 'Futura', sans-serif;
+    font-size: 1.1em;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+    font-family: 'Futura', sans-serif;
+    font-size: 1.2em;
+}
+
+h1, h2, h3 {
+    color: #e6e6e6;
+    font-family: 'Futura', sans-serif;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    font-family: 'Futura', sans-serif;
+    font-size: 1em;
+    letter-spacing: 0.03em;
+}
+
+.button {
+    background-color: #e6e6e6;
+    color: #1a1a1a;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: 'Futura', sans-serif;
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: #f2f2f2;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.gallery-item {
+    background-color: #333;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    width: 200px;
+}
+
+.gallery-item a {
+    color: #e6e6e6;
+    text-decoration: none;
+    font-family: 'Futura', sans-serif;
+    font-size: 1.1em;
+}
+
+.gallery-item a:hover {
+    text-decoration: underline;
+}
+
+
