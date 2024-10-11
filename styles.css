@@ -79,28 +79,20 @@ footer {
 .gallery {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
     gap: 20px;
-    justify-content: center;
-    padding: 20px 0;
 }
 
-.gallery-item {
-    background-color: #333;
-    padding: 15px;
-    border-radius: 10px;
-    text-align: center;
-    width: 200px;
+.gallery img {
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
 }
 
-.gallery-item a {
-    color: #e6e6e6;
-    text-decoration: none;
-    font-family: 'Futura', sans-serif;
-    font-size: 1.1em;
-}
-
-.gallery-item a:hover {
-    text-decoration: underline;
+.gallery img:hover {
+    transform: scale(1.05);
 }
 
 
