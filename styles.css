@@ -61,7 +61,7 @@ main {
 }
 
 h1, h2, h3 {
-    color: #e6e6e6;
+    color: #0c0b0b;
     font-family: 'Futura', sans-serif;
 }
 
@@ -308,20 +308,22 @@ main {
 }
 
 .contact-info {
-    background-color: #111;
+    background-color: #f0f0f0; /* Light gray background */
     padding: 30px;
     border-radius: 10px;
+    border: 1px solid #ccc; /* Light border */
 }
 
 .contact-item {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
+    color: #000; /* Black text */
 }
 
 .contact-item i {
     font-size: 24px;
-    color: var(--primary-color);
+    color: var(--primary-color); /* Keep icon color as primary */
     margin-right: 15px;
 }
 
@@ -336,9 +338,10 @@ main {
 }
 
 .contact-form {
-    background-color: #111;
+    background-color: #f0f0f0; /* Light gray background */
     padding: 30px;
     border-radius: 10px;
+    border: 1px solid #ccc; /* Light border */
 }
 
 .contact-form h3 {
@@ -350,17 +353,17 @@ main {
 .contact-form input,
 .contact-form textarea {
     width: 100%;
-    padding: 10px;
+    padding: 12px; /* Increased padding for better usability */
     margin-bottom: 15px;
-    border: 1px solid #333;
-    background-color: #222;
-    color: #fff;
+    border: 1px solid #ccc; /* Light border */
+    background-color: #fff; /* White background for inputs */
+    color: #000; /* Black text */
     border-radius: 5px;
 }
 
 .contact-form textarea {
-    height: 150px;
-    resize: vertical;
+    height: 200px; /* Increased height for better usability */
+    resize: vertical; /* Allow vertical resizing */
 }
 
 .contact-form button {
@@ -374,7 +377,7 @@ main {
 }
 
 .contact-form button:hover {
-    background-color: #0056b3;
+    background-color: #0056b3; /* Darker shade on hover */
 }
 
 .map-container {
@@ -386,11 +389,12 @@ main {
 .map-container iframe {
     width: 100%;
     height: 450px;
+    border: none; /* Remove default border */
 }
 
 @media (max-width: 768px) {
     .contact-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Stack items on smaller screens */
     }
 }
 
@@ -457,4 +461,24 @@ main {
     .lightbox-content {
         width: 100%;
     }
+}
+
+.hero {
+    background: url('pics/splash.jpg') no-repeat center center/cover; /* For a static image */
+    /* OR */
+    background: url('pics/slpash.gif') no-repeat center center/cover; /* For an animated GIF */
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.welcome-message {
+    color: silver; /* Change text color to silver */
+    font-size: 5em; /* Increase font size */
+    text-align: center; /* Center the text */
+    margin: 0; /* Remove default margin */
+    padding: 20px 0; /* Add some padding for spacing */
 }
