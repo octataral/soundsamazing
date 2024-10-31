@@ -28,16 +28,3 @@ document.addEventListener('DOMContentLoaded', (event) => {
         }
     }
 });
-
-function expandGallery(galleryClass) {
-    // Hide all full galleries
-    const allGalleries = document.querySelectorAll('.full-gallery');
-    allGalleries.forEach(gallery => {
-        if (gallery.classList.contains(galleryClass)) {
-            // Toggle the display of the clicked gallery
-            gallery.style.display = gallery.style.display === 'none' || gallery.style.display === '' ? 'flex' : 'none';
-        } else {
-            gallery.style.display = 'none'; // Hide other galleries
-        }
-    });
-}
