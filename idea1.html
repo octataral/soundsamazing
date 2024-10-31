@@ -148,6 +148,18 @@
         html {
             scroll-behavior: smooth;
         }
+
+        .image-container {
+            text-align: center; /* Center the image */
+            margin-top: 20px; /* Space above the image */
+        }
+
+        .responsive-image {
+            width: 100%; /* Make the image responsive */
+            height: auto; /* Maintain aspect ratio */
+            max-width: 800px; /* Optional: Set a max width for larger screens */
+            border-radius: 10px; /* Optional: Add rounded corners */
+        }
     </style>
 </head>
 <body>
@@ -249,6 +261,16 @@
                 Experience white-glove service from design to installation to configuration. We handle every detail, ensuring a seamless process and a result that exceeds your expectations.
             </p>
             <a href="contact.html" class="button">Get Full-Service Assistance</a>
+
+            <!-- New Image Section -->
+            <div class="image-container">
+                <img src="pics/BasicHomeTheatre.png" alt="Basic Home Theatre" class="responsive-image">
+            </div>
+
+            <!-- Add Timeline Image -->
+            <div class="image-container">
+                <img src="pics/timeline.png" alt="Project Timeline" class="responsive-image">
+            </div>
         </div>
     </section>
 
