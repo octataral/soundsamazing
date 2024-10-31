@@ -1,180 +1,303 @@
-<!-- brands.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Our Brands - Sounds Amazing</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sounds Amazing - One Page</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .section {
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .hero {
+            background: url('https://source.unsplash.com/1600x900/?audio,music') no-repeat center center/cover;
+            color: #fff;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .btn {
+            background: #ff6600;
+            color: #fff;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #e65500;
+        }
+
+        .service-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .service {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 300px;
+        }
+
+        .brand-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .brand {
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 300px;
+            text-align: left;
+        }
+
+        .brand img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+        }
+
+        .brand.premium-audio {
+            background: #e0f7fa;
+        }
+
+        .brand.premium-television {
+            background: #ffe6e6;
+        }
+
+        .brand.smart-home {
+            background: #f0f4c3;
+        }
+
+        .about {
+            background: #222;
+            color: #fff;
+        }
+
+        .contact form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .contact input, .contact textarea {
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        .footer {
+            background: #333;
+            color: #fff;
+            padding: 20px 0;
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 <body>
 
-<header>
-    <h1>Sounds Amazing</h1>
-
-</header>
-
-<nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About Us</a>
-    <a href="brands.html">Our Brands</a>
-    <a href="services.html">Services</a>
-    <a href="levels-of-service.html">Levels of Service</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="contact.html">Contact Us</a>
-</nav>
-
-<main>
-    <h1>Premium Audio and Visual Brands We Carry</h1>
-    
-    <section>
-        <h2>Premium Televisions</h2>
-        
-        <article class="brand">
-            <h3>Sony</h3>
-            <img src="brands/sony-logo.png" alt="Sony logo" class="brand-logo">
-            <p>Sony's BRAVIA line of televisions offers stunning 4K and 8K resolution, vibrant colors, and smart features. Their OLED and LED models provide exceptional picture quality for an immersive viewing experience.</p>
-            <a href="https://www.sony.com" rel="nofollow" target="_blank">Visit Sony website</a>
-        </article>
-
-        <article class="brand">
-            <h3>LG</h3>
-            <img src="brands/lgtv-logo.png" alt="LG logo" class="brand-logo">
-            <p>LG is a leader in OLED technology, offering televisions with perfect blacks, infinite contrast, and wide viewing angles. Their smart TV platform provides easy access to streaming services and apps.</p>
-            <a href="https://www.lg.com" rel="nofollow" target="_blank">Visit LG website</a>
-        </article>
-
-        <article class="brand">
-            <h3>Samsung</h3>
-            <img src="brands/samsung-logo.png" alt="Samsung logo" class="brand-logo">
-            <p>Samsung's QLED TVs deliver brilliant colors and deep blacks, with cutting-edge features like AI upscaling and Ambient Mode. Their range includes everything from affordable 4K sets to premium 8K models.</p>
-            <a href="https://www.samsung.com" rel="nofollow" target="_blank">Visit Samsung website</a>
-        </article>
+    <!-- Hero Section -->
+    <section id="hero" class="section hero">
+        <div class="container">
+            <h1>Welcome to Sounds Amazing</h1>
+            <p>Your one-stop shop for premium sound experiences.</p>
+            <a href="#services" class="btn">Explore Our Services</a>
+        </div>
     </section>
 
-    <section>
-        <h2>Premium Audio</h2>
-
-        <article class="brand">
-            <h3>Bose</h3>
-            <img src="brands/bose-logo.png" alt="Bose logo" class="brand-logo">
-            <p>Bose is renowned for its high-quality audio equipment, including home theater systems, speakers, and headphones. Their innovative technology delivers rich, clear sound in compact designs.</p>
-            <a href="https://www.bose.com" rel="nofollow" target="_blank">Visit Bose website</a>
-        </article>
-
-        <article class="brand">
-            <h3>Sonos</h3>
-            <img src="brands/sonos-logo.png" alt="Sonos logo" class="brand-logo">
-            <p>Sonos is a leader in wireless home sound systems. Their products offer exceptional sound quality and easy multi-room setup, perfect for creating an immersive audio experience throughout your home.</p>
-            <a href="https://www.sonos.com" rel="nofollow" target="_blank">Visit Sonos website</a>
-        </article>
-
-        <article class="brand">
-            <h3>Denon</h3>
-            <img src="brands/denon-logo.png" alt="Denon logo" class="brand-logo">
-            <p>Denon is a trusted name in high-fidelity audio equipment. They offer a wide range of products including AV receivers, amplifiers, and wireless speakers, known for their superior sound quality and reliability.</p>
-            <a href="https://www.denon.com" rel="nofollow" target="_blank">Visit Denon website</a>
-        </article>
-
-        <article class="brand">
-            <h3>Marantz</h3>
-            <img src="brands/marantz-logo.png" alt="Marantz logo" class="brand-logo">
-            <p>Marantz is synonymous with high-end audio. Their amplifiers, receivers, and CD players are crafted for audiophiles who demand the purest sound reproduction and elegant design.</p>
-            <a href="https://www.marantz.com" rel="nofollow" target="_blank">Visit Marantz website</a>
-        </article>
-
-        <article class="brand">
-            <h3>Monitor Audio</h3>
-            <img src="brands/monitor-audio-logo.png" alt="Monitor Audio logo" class="brand-logo">
-            <p>Monitor Audio is known for its high-performance loudspeakers. With innovative technologies and premium materials, they deliver exceptional sound quality and stunning aesthetics for discerning audio enthusiasts.</p>
-            <a href="https://www.monitoraudio.com" rel="nofollow" target="_blank">Visit Monitor Audio website</a>
-        </article>
-
-        <article class="brand">
-            <h3>Acoustic Energy</h3>
-            <img src="brands/acoustic-energy-logo.png" alt="Acoustic Energy logo" class="brand-logo">
-            <p>Acoustic Energy produces award-winning loudspeakers known for their accuracy and natural sound reproduction. Their range includes both traditional and modern designs to suit various preferences.</p>
-            <a href="https://www.acousticenergy.co.uk" rel="nofollow" target="_blank">Visit Acoustic Energy website</a>
-        </article>
-
-        <article class="brand">
-            <h3>Russound</h3>
-            <img src="brands/russound-logo.png" alt="Russound logo" class="brand-logo">
-            <p>Russound specializes in multi-room audio systems and products. They offer innovative solutions for whole-home audio distribution, combining high-quality sound with user-friendly controls.</p>
-            <a href="https://www.russound.com" rel="nofollow" target="_blank">Visit Russound website</a>
-        </article>
-
-        <article class="brand">
-            <h3>IsoAcoustics GAIA</h3>
-            <img src="brands/isoacoustics-logo.png" alt="IsoAcoustics logo" class="brand-logo">
-            <p>IsoAcoustics GAIA speaker isolation feet provide superior acoustic isolation, enhancing the clarity and focus of your speakers. They're designed to eliminate unwanted vibrations for purer sound.</p>
-            <a href="https://isoacoustics.com/gaia-series/" rel="nofollow" target="_blank">Visit IsoAcoustics GAIA website</a>
-        </article>
-
-        <article class="brand">
-            <h3>Bluesound</h3>
-            <img src="brands/bluesound-logo.png" alt="Bluesound logo" class="brand-logo">
-            <p>Bluesound offers high-resolution multi-room wireless streaming systems. Their products deliver audiophile-grade sound quality with the convenience of modern streaming technology.</p>
-            <a href="https://www.bluesound.com" rel="nofollow" target="_blank">Visit Bluesound website</a>
-        </article>
-
-        <article class="brand">
-            <h3>AudioQuest</h3>
-            <img src="brands/audioquest-logo.png" alt="AudioQuest logo" class="brand-logo">
-            <p>AudioQuest produces high-quality audio cables, power products, and digital-to-analog converters. Their products are designed to minimize distortion and interference for the purest signal transmission.</p>
-            <a href="https://www.audioquest.com" rel="nofollow" target="_blank">Visit AudioQuest website</a>
-        </article>
+    <!-- Services Section -->
+    <section id="services" class="section services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service-list">
+                <div class="service">
+                    <h3>Home Audio Setup</h3>
+                    <p>We offer professional-grade audio setups for your home to bring theater-quality sound to your living room.</p>
+                </div>
+                <div class="service">
+                    <h3>Event Sound Systems</h3>
+                    <p>Make your events unforgettable with our state-of-the-art sound systems designed for any occasion.</p>
+                </div>
+                <div class="service">
+                    <h3>Consultation Services</h3>
+                    <p>Our experts are here to help you plan the perfect sound system tailored to your needs.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section>
-        <h2>Smart Home and Automation</h2>
-
-        <article class="brand">
-            <h3>Control4</h3>
-            <img src="brands/control4-logo.png" alt="Control4 logo" class="brand-logo">
-            <p>Control4 is a leading provider of home automation and smart home solutions. Their systems allow seamless control of lighting, audio, video, climate, and security from a single interface.</p>
-            <a href="https://www.control4.com" rel="nofollow" target="_blank">Visit Control4 website</a>
-        </article>
-
-        <article class="brand">
-            <h3>RTI</h3>
-            <img src="brands/rti-logo.png" alt="RTI logo" class="brand-logo">
-            <p>RTI (Remote Technologies Incorporated) offers advanced control and automation systems for residential and commercial applications. Their solutions provide intuitive control over complex electronic systems.</p>
-            <a href="https://www.rticontrol.com" rel="nofollow" target="_blank">Visit RTI website</a>
-        </article>
-
-        <article class="brand">
-            <h3>Google Home</h3>
-            <img src="brands/google-home-logo.png" alt="Google Home logo" class="brand-logo">
-            <p>Google Home is a line of smart speakers and displays that use Google Assistant. These devices offer voice-controlled smart home management, audio playback, and access to Google's vast information services.</p>
-            <a href="https://store.google.com/category/connected_home" rel="nofollow" target="_blank">Learn more about Google Home</a>
-        </article>
-
-        <article class="brand">
-            <h3>Apple HomeKit</h3>
-            <img src="brands/apple-homekit-logo.png" alt="Apple HomeKit logo" class="brand-logo">
-            <p>Apple HomeKit is a software framework by Apple that lets users set up their iOS devices to configure, communicate with, and control smart-home appliances. It provides a seamless, secure smart home experience for Apple users.</p>
-            <a href="https://www.apple.com/ios/home/" rel="nofollow" target="_blank">Learn more about Apple HomeKit</a>
-        </article>
-
-        <article class="brand">
-            <h3>Home Assistant</h3>
-            <img src="brands/home-assistant-logo.png" alt="Home Assistant logo" class="brand-logo">
-            <p>Home Assistant is an open-source home automation platform designed to be the central control system for smart home devices with focus on local control and privacy. It offers extensive integration capabilities and customization options.</p>
-            <a href="https://www.home-assistant.io" rel="nofollow" target="_blank">Visit Home Assistant website</a>
-        </article>
-
-        <article class="brand">
-            <h3>Amazon Alexa</h3>
-            <img src="brands/amazon-alexa-logo.png" alt="Amazon Alexa logo" class="brand-logo">
-            <p>Amazon Alexa is a virtual assistant AI that can control smart home devices, play music, provide information, and more through voice commands. It's available on various Amazon Echo devices and third-party products.</p>
-            <a href="https://www.amazon.com/alexa" rel="nofollow" target="_blank">Learn more about Amazon Alexa</a>
-        </article>
+    <!-- 2 Channel Audio Section -->
+    <section id="two-channel-audio" class="section two-channel-audio">
+        <div class="container">
+            <h2>2 Channel Audio</h2>
+            <p>Immerse yourself in the purest form of audio with our custom two-channel setups. We specialize in high-fidelity sound systems that bring your music to life, exactly as the artist intended.</p>
+            <p>Our offerings include:</p>
+            <ul>
+                <li>High-End Amplifiers and Speakers</li>
+                <li>Vinyl Turntables and Accessories</li>
+                <li>Digital Streaming Solutions</li>
+                <li>Room Acoustics Optimization</li>
+                <li>Personalized System Tuning</li>
+            </ul>
+            <p>Whether you're an audiophile or a casual listener, our systems are designed to deliver exceptional sound quality tailored to your preferences.</p>
+            <a href="#contact" class="btn">Discover More</a>
+        </div>
     </section>
-</main>
 
-<footer>
-    <p>&copy; 2024 Sounds Amazing</p>
-</footer>
+    <!-- Brands Section -->
+    <section id="brands" class="section brands">
+        <div class="container">
+            <h2>Our Brands</h2>
+            <div class="brand-section">
+                <div class="brand premium-television">
+                    <h3>Sony</h3>
+                    <img src="brands/sony-logo.png" alt="Sony logo">
+                    <p>Sony's BRAVIA line of televisions offers stunning 4K and 8K resolution, vibrant colors, and smart features. Their OLED and LED models provide exceptional picture quality for an immersive viewing experience.</p>
+                    <a href="https://www.sony.com" rel="nofollow" target="_blank">Visit Sony website</a>
+                </div>
+                <div class="brand premium-television">
+                    <h3>LG</h3>
+                    <img src="brands/lgtv-logo.png" alt="LG logo">
+                    <p>LG is a leader in OLED technology, offering televisions with perfect blacks, infinite contrast, and wide viewing angles. Their smart TV platform provides easy access to streaming services and apps.</p>
+                    <a href="https://www.lg.com" rel="nofollow" target="_blank">Visit LG website</a>
+                </div>
+                <div class="brand premium-television">
+                    <h3>Samsung</h3>
+                    <img src="brands/samsung-logo.png" alt="Samsung logo">
+                    <p>Samsung's QLED TVs deliver brilliant colors and deep blacks, with cutting-edge features like AI upscaling and Ambient Mode. Their range includes everything from affordable 4K sets to premium 8K models.</p>
+                    <a href="https://www.samsung.com" rel="nofollow" target="_blank">Visit Samsung website</a>
+                </div>
+                <div class="brand premium-audio">
+                    <h3>Bose</h3>
+                    <img src="brands/bose-logo.png" alt="Bose logo">
+                    <p>Bose is renowned for its high-quality audio equipment, including home theater systems, speakers, and headphones. Their innovative technology delivers rich, clear sound in compact designs.</p>
+                    <a href="https://www.bose.com" rel="nofollow" target="_blank">Visit Bose website</a>
+                </div>
+                <div class="brand premium-audio">
+                    <h3>Sonos</h3>
+                    <img src="brands/sonos-logo.png" alt="Sonos logo">
+                    <p>Sonos is a leader in wireless home sound systems. Their products offer exceptional sound quality and easy multi-room setup, perfect for creating an immersive audio experience throughout your home.</p>
+                    <a href="https://www.sonos.com" rel="nofollow" target="_blank">Visit Sonos website</a>
+                </div>
+                <div class="brand premium-audio">
+                    <h3>Denon</h3>
+                    <img src="brands/denon-logo.png" alt="Denon logo">
+                    <p>Denon is a trusted name in high-fidelity audio equipment. They offer a wide range of products including AV receivers, amplifiers, and wireless speakers, known for their superior sound quality and reliability.</p>
+                    <a href="https://www.denon.com" rel="nofollow" target="_blank">Visit Denon website</a>
+                </div>
+                <div class="brand smart-home">
+                    <h3>Control4</h3>
+                    <img src="brands/control4-logo.png" alt="Control4 logo">
+                    <p>Control4 is a leading provider of home automation and smart home solutions. Their systems allow seamless control of lighting, audio, video, climate, and security from a single interface.</p>
+                    <a href="https://www.control4.com" rel="nofollow" target="_blank">Visit Control4 website</a>
+                </div>
+                <div class="brand smart-home">
+                    <h3>RTI</h3>
+                    <img src="brands/rti-logo.png" alt="RTI logo">
+                    <p>RTI (Remote Technologies Incorporated) offers advanced control and automation systems for residential and commercial applications. Their solutions provide intuitive control over complex electronic systems.</p>
+                    <a href="https://www.rticontrol.com" rel="nofollow" target="_blank">Visit RTI website</a>
+                </div>
+                <div class="brand smart-home">
+                    <h3>Google Home</h3>
+                    <img src="brands/google-home-logo.png" alt="Google Home logo">
+                    <p>Google Home is a line of smart speakers and displays that use Google Assistant. These devices offer voice-controlled smart home management, audio playback, and access to Google's vast information services.</p>
+                    <a href="https://store.google.com/category/connected_home" rel="nofollow" target="_blank">Learn more about Google Home</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>With two decades of expertise, Sounds Amazing has established itself as a leader in custom home audio and video solutions. As a locally owned and operated company, we take pride in delivering personalized experiences that reflect your unique taste and lifestyle. Our team of seasoned professionals is dedicated to exceeding your expectations through exceptional service and unparalleled craftsmanship.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form action="#" method="post">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Sounds Amazing. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for internal links
+        $(document).ready(function(){
+            $('a[href^="#"]').on('click', function(event) {
+                var target = $(this.getAttribute('href'));
+                if( target.length ) {
+                    event.preventDefault();
+                    $('html, body').stop().animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                }
+            });
+        });
+    </script>
 </body>
 </html>
