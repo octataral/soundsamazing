@@ -60,7 +60,7 @@ main {
     font-size: 1.2em;
 }
 
-h1, h2, h3 {
+h1, h2 {
     color: #0c0b0b;
     font-family: 'Futura', sans-serif;
 }
@@ -88,22 +88,23 @@ footer {
 }
 
 .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow wrapping of images */
+    justify-content: center; /* Center the images */
+    padding: 20px; /* Add padding around the gallery */
 }
 
-.gallery img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.gallery-img {
+    width: 150px; /* Set a fixed width for thumbnails */
+    height: auto; /* Maintain aspect ratio */
+    margin: 10px; /* Add margin between images */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    transition: transform 0.2s; /* Optional: Add a transition effect */
 }
 
-.gallery img:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+.gallery-img:hover {
+    transform: scale(1.05); /* Optional: Slightly enlarge on hover */
 }
 
 @media (max-width: 768px) {
@@ -410,57 +411,61 @@ main {
 }
 
 .lightbox {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    padding-top: 100px;
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
     left: 0;
     top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.9);
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
 }
 
-.lightbox-content {
+.lightbox-img {
     margin: auto;
     display: block;
-    width: 80%;
-    max-width: 700px;
+    max-width: 90%; /* Responsive image */
+    max-height: 80%; /* Responsive image */
+    margin-top: 5%; /* Center vertically */
 }
 
-#caption {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
+.caption {
     text-align: center;
-    color: #ccc;
-    padding: 10px 0;
-    height: 150px;
+    color: #fff;
+    margin-top: 10px;
 }
 
 .close {
     position: absolute;
-    top: 15px;
-    right: 35px;
-    color: #f1f1f1;
+    top: 20px;
+    right: 30px;
+    color: #fff;
     font-size: 40px;
     font-weight: bold;
-    transition: 0.3s;
-}
-
-.close:hover,
-.close:focus {
-    color: #bbb;
-    text-decoration: none;
     cursor: pointer;
 }
 
-@media only screen and (max-width: 700px){
-    .lightbox-content {
-        width: 100%;
-    }
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 16px;
+    transition: 0.6s ease;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    color: #bbb; /* Change color on hover */
 }
 
 .hero {
@@ -701,4 +706,83 @@ html {
     height: auto; /* Maintain aspect ratio */
     max-width: 800px; /* Optional: Set a max width for larger screens */
     border-radius: 10px; /* Optional: Add rounded corners */
+}
+
+.gallery-container {
+    background-color: #fff9e6; /* Very light yellow background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 20px; /* Padding inside the container */
+    margin: 20px 0; /* Margin above and below the container */
+    position: relative; /* Position relative for the pseudo-element */
+}
+
+.gallery-container::after {
+    content: ""; /* Create a pseudo-element */
+    display: block; /* Make it a block element */
+    height: 4px; /* Height of the line */
+    background-color: rgba(0, 0, 0, 0.1); /* Light shadow or line color */
+    margin-top: 20px; /* Space above the line */
+}
+
+.gallery {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow wrapping of images */
+    justify-content: center; /* Center the images */
+    padding: 10px; /* Add padding around the gallery */
+}
+
+.gallery-img {
+    width: 150px; /* Set a fixed width for thumbnails */
+    height: auto; /* Maintain aspect ratio */
+    margin: 10px; /* Add margin between images */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    transition: transform 0.2s; /* Optional: Add a transition effect */
+}
+
+.gallery-img:hover {
+    transform: scale(1.05); /* Optional: Slightly enlarge on hover */
+}
+
+.gallery-section {
+    background-color: #fff3e0; /* Light orange/yellow background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 15px; /* Padding inside the section */
+    margin: 20px 0; /* Margin above and below the section */
+}
+
+.gallery-section h3 {
+    margin-top: 0; /* Remove top margin for the heading */
+}
+
+.main-card {
+    background-color: #d8e4d9; /* Darker earthy green for the main card */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    padding: 20px; /* Padding inside the main card */
+    margin: 20px 0; /* Margin above and below the main card */
+    color: #ffffff; /* White text color for contrast */
+}
+
+.individual-card {
+    background-color: #a8d5ba; /* Lighter green for individual cards */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 15px; /* Padding inside the individual card */
+    margin: 10px 0; /* Margin above and below the individual card */
+}
+
+.individual-card h3, .individual-card h4 {
+    margin-top: 0; /* Remove top margin for the heading */
+}
+
+h3 {
+    font-size: 2em; /* Increase the font size */
+    text-align: center; /* Center the text */
+    font-weight: bold; /* Make the text bold */
+    color: #4a6e4d; /* Use a darker green color for contrast */
+    margin: 20px 0; /* Add margin above and below the heading */
+    text-transform: uppercase; /* Make the text uppercase for a commanding look */
 }
